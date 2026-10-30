@@ -1,0 +1,3 @@
+import {box,text,wrap,ease,particles,spark} from '../draw.js';
+import roti from '../characters/roti.js';import yisa from '../characters/yisa.js';import rizo from '../characters/rizo.js';
+export default function(c,t,p,m){box(c,90,420,900,850,'#8c6d67');roti(c,{y:850,t,mouth:m});box(c,230,590,620,550,'rgba(198,230,243,.28)',40);c.strokeStyle='#a5e9f2';c.lineWidth=13;c.beginPath();c.moveTo(250,625);c.lineTo(250+580*ease(p*3-1),625);c.stroke();if(p<.48){box(c,130,480,95,150,'#65bfd2');box(c,90,430,185,55,'#f2b98f');for(let i=0;i<25;i++){c.fillStyle='#a6e8f5';c.beginPath();c.arc(240+(i*53+t*130)%300,560+i*11,4,0,7);c.fill();}}text(c,'Air + beg berzip + laci',540,1220,38,'white');if(p>.65){c.fillStyle=`rgba(10,8,20,${ease((p-.65)/.35)*.95})`;c.fillRect(90,420,900,850);}}

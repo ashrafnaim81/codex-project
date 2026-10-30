@@ -1,0 +1,2 @@
+import {eyes} from '../draw.js';
+export default function yisa(c,{x=540,y=750,t=0,mouth=0,emotion='neutral',scale=1}={}){c.save();c.translate(x,y);c.scale(scale,scale*(1+Math.sin(t*4)*.08));c.fillStyle='#f9c35e';c.strokeStyle='#301d2d';c.lineWidth=9;c.beginPath();c.ellipse(0,0,100,140,0,0,7);c.fill();c.stroke();eyes(c,t,mouth,false,emotion);for(let i=0;i<7;i++){c.strokeStyle='#fff0b3';c.beginPath();c.arc(120+i*22,80-((t*90+i*61)%350),12+i%3*5,0,7);c.stroke();}c.restore();}

@@ -1,0 +1,2 @@
+import {eyes,box,text} from '../draw.js';
+export default function rizo(c,{x=540,y=650,t=0,mouth=0,emotion='neutral',scale=1}={}){c.save();c.translate(x,y+Math.sin(t*3)*12);c.scale(scale,scale);c.fillStyle='#96b090';c.strokeStyle='#301d2d';c.lineWidth=9;c.beginPath();c.arc(0,0,110,0,7);c.fill();c.stroke();eyes(c,t,mouth,false,emotion);box(c,65,65,100,130,'#f4e6c5',12);text(c,'✓',115,150,65);c.restore();}

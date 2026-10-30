@@ -1,0 +1,1 @@
+import s1 from './scene1.js';import s2 from './scene2.js';import s3 from './scene3.js';import s4 from './scene4.js';import s5 from './scene5.js';import s6 from './scene6.js';import s7 from './scene7.js';import s8 from './scene8.js';export default [s1,s2,s3,s4,s5,s6,s7,s8];

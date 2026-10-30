@@ -1,0 +1,26 @@
+{
+  "name": "codex-project",
+  "version": "1.0.0",
+  "description": "Animasi prosedural Sains Tahun 6: Mikroorganisma",
+  "scripts": {
+    "render": "bash voice.sh && node src/render.js",
+    "preview": "bash voice.sh && node src/render.js --preview",
+    "stills": "node src/render.js --stills",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrafnaim81/codex-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ashrafnaim81/codex-project/issues"
+  },
+  "homepage": "https://github.com/ashrafnaim81/codex-project#readme",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.1.0"
+  }
+}

@@ -1,0 +1,2 @@
+import {box,eyes} from '../draw.js';
+export default function roti(c,{x=540,y=780,t=0,mouth=0,emotion='neutral',mould=0,glasses=false,scale=1}={}){c.save();c.translate(x,y);c.scale(scale*(1+Math.sin(t*4)*.025),scale*(1-Math.sin(t*4)*.025));box(c,-145,-180,290,340,'#c88a4b',65);box(c,-121,-157,242,293,'#fff2c9',50);for(let i=0;i<45*mould;i++){const a=i*2.399,rad=30+(i*41)%120;c.fillStyle=['#58835c','#243d41','#94a55e'][i%3];c.beginPath();c.arc(Math.cos(a)*rad,Math.sin(a)*rad-25,13+i%15,0,7);c.fill();}eyes(c,t,mouth,glasses,emotion);c.restore();}
