@@ -1,0 +1,1 @@
+const {face,line}=require('./common');module.exports=(c,o={})=>{face(c,o,'#84ce71');let x=(o.x||540)+150,y=(o.y||850)-140;c.save();c.fillStyle='#ffda67';c.beginPath();c.arc(x,y,25,0,7);c.fill();for(let i=0;i<8;i++){let a=i*Math.PI/4;line(c,x+Math.cos(a)*35,y+Math.sin(a)*35,x+Math.cos(a)*52,y+Math.sin(a)*52,'#edb64f',6)}c.restore()};

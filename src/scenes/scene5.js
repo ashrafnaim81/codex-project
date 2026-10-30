@@ -1,0 +1,1 @@
+const {text,bg,spark}=require('./common'),roti=require('../characters/roti');module.exports=(c,t,p,m)=>{bg(c,'#f1d6ac');text(c,`HARI ${p<.3?'1':p<.7?'5':'7'}`,540,550,78);roti(c,{x:540,y:900,t,mouth:m,mould:p});for(let i=0;i<8;i++)spark(c,200+i*95,650+Math.sin(i*3)*50,t);text(c,'Mikroorganisma bertumbuh!',540,1220,36)};

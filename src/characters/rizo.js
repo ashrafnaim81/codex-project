@@ -1,0 +1,1 @@
+const {face}=require('./common');module.exports=(c,o={})=>{let x=o.x||540,y=(o.y||850)+Math.sin((o.t||0)*3)*12;face(c,{...o,x,y},'#9bb98c');c.save();c.fillStyle='#f2e2bb';c.strokeStyle='#342532';c.lineWidth=7;c.beginPath();c.roundRect(x+58,y+60,100,120,10);c.fill();c.stroke();c.fillStyle='#638151';c.font='bold 44px sans-serif';c.fillText('✓',x+78,y+137);c.restore()};

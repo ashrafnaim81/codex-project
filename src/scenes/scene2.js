@@ -1,0 +1,1 @@
+const {text,rect,bg,spark}=require('./common'),yisa=require('../characters/yisa');module.exports=(c,t,p,m)=>{bg(c,'#ead0a4');text(c,'IMBAS KEMBALI · KEDAI ROTI',540,500,34);rect(c,170,950-p*100,740,230+p*100,'#f4d7a7',100);yisa(c,{x:500,y:800-p*80,t,mouth:m});text(c,'Doh mengembang',540,1230,35);for(let i=0;i<6;i++)spark(c,200+i*135,600+Math.sin(t+i)*30,t)};

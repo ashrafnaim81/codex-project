@@ -1,0 +1,1 @@
+const {face,line}=require('./common');module.exports=(c,o={})=>{let x=o.x||540,y=o.y||850;c.save();c.translate(x,y);c.rotate(Math.sin((o.t||0)*2)*.12);for(let i=0;i<24;i++){let a=i*Math.PI/12;line(c,Math.cos(a)*105,Math.sin(a)*105,Math.cos(a)*140,Math.sin(a)*140,'#342532',5)}face(c,{...o,x:0.01,y:0.01},'#90d1dd');c.restore()};

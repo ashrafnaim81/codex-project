@@ -1,0 +1,1 @@
+const {face}=require('./common');module.exports=(c,o={})=>{face(c,o,'#f3c562');c.save();c.strokeStyle='#fff5d1';c.lineWidth=6;let x=o.x||540,y=o.y||850;for(let i=0;i<7;i++){c.beginPath();c.arc(x+90+i*25,y-((i*53+(o.t||0)*75)%300),10+i%3*4,0,7);c.stroke()}c.restore()};
