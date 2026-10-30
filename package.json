@@ -1,0 +1,26 @@
+{
+  "name": "terra-medium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stills": "node src/render.js --stills",
+    "preview": "bash voice.sh && node src/render.js --preview",
+    "render": "bash voice.sh && node src/render.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrafnaim81/codex-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ashrafnaim81/codex-project/issues"
+  },
+  "homepage": "https://github.com/ashrafnaim81/codex-project#readme",
+  "dependencies": {
+    "@napi-rs/canvas": "^1.1.0"
+  }
+}
