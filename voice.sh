@@ -1,22 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")"
-mkdir -p out/voice
-if command -v say >/dev/null 2>&1; then
-  engine=say
-elif command -v espeak-ng >/dev/null 2>&1; then
-  engine=espeak-ng
+if [ -n "${PYTHON_BIN:-}" ]; then
+  exec "$PYTHON_BIN" scripts/voice.py
+elif [ -x .venv/bin/python ]; then
+  exec .venv/bin/python scripts/voice.py
+elif command -v python3 >/dev/null 2>&1; then
+  exec python3 scripts/voice.py
 else
-  echo "Tiada say/espeak-ng: teruskan tanpa suara; sari kata dikekalkan."
-  exit 0
+  echo "Python 3 diperlukan: brew install python"
+  exit 1
 fi
-for i in {1..8}; do
-  text=$(node --input-type=module -e "import fs from 'node:fs'; console.log(JSON.parse(fs.readFileSync('src/narration.json'))[$i-1])")
-  if [ "$engine" = say ]; then
-    say -v Amira -r 180 -o "out/voice/$i.aiff" "$text"
-    ffmpeg -v error -y -i "out/voice/$i.aiff" -ar 24000 -ac 1 "out/voice/$i.wav"
-    rm "out/voice/$i.aiff"
-  else
-    espeak-ng -v ms -s 180 -w "out/voice/$i.wav" "$text"
-  fi
-done

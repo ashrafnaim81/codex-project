@@ -1,0 +1,2 @@
+# Primary engine: keyless online Microsoft Edge TTS.
+edge-tts==7.3.1

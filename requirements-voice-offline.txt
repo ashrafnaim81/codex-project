@@ -1,0 +1,6 @@
+# Optional CPU fallback. On Linux install CPU torch first (see README).
+-r requirements-voice.txt
+transformers>=4.45,<5
+torch>=2.6,<3
+numpy>=1.26,<3
+scipy>=1.12,<2

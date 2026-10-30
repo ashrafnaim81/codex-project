@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Animasi prosedural Sains Tahun 6: Mikroorganisma",
   "scripts": {
-    "render": "bash voice.sh && node src/render.js",
-    "preview": "bash voice.sh && node src/render.js --preview",
+    "render": "npm run voice && node src/render.js",
+    "preview": "npm run voice && node src/render.js --preview",
     "stills": "node src/render.js --stills",
-    "test": "node --test"
+    "test": "node --test",
+    "voice": "bash voice.sh",
+    "test:voice": "python3 -m unittest discover -s test -p \"test_*.py\""
   },
   "repository": {
     "type": "git",
