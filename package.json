@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "stills": "node src/render.js --stills",
-    "preview": "bash voice.sh && node src/render.js --preview",
-    "render": "bash voice.sh && node src/render.js"
+    "preview": "npm run voice && node src/render.js --preview",
+    "render": "npm run voice && node src/render.js",
+    "voice": "bash voice.sh"
   },
   "repository": {
     "type": "git",
